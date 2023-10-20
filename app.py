@@ -75,17 +75,17 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Chat with multiple PDFs :books:")
-    user_question = st.text_input("Ask a question about your documents:")
+    st.header("BAZ | SmartProject :books:")
+    user_question = st.text_input("Stel een vraag:")
     if user_question:
         handle_userinput(user_question)
 
     with st.sidebar:
-        st.subheader("Your documents")
+        st.subheader("Mijn Documenten")
         pdf_docs = st.file_uploader(
-            "Upload your PDFs here and click on 'Process'", accept_multiple_files=True)
-        if st.button("Process"):
-            with st.spinner("Processing"):
+            "Upload de projectbestanden en klik op 'Opslaan'", accept_multiple_files=True)
+        if st.button("Opslaan"):
+            with st.spinner("Opslaan..."):
                 # get pdf text
                 raw_text = get_pdf_text(pdf_docs)
 
