@@ -33,12 +33,14 @@ def get_text_chunks(text):
 def get_vectorstore(text_chunks):
     embeddings = OpenAIEmbeddings()
     # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
+    # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
 
 
 def get_conversation_chain(vectorstore):
     llm = ChatOpenAI()
+    # llm = HuggingFaceHub(repo_id="tiiuae/falcon-7b-instruct", model_kwargs={"temperature":0.5, "max_length":512})
     # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 
     memory = ConversationBufferMemory(
@@ -67,7 +69,7 @@ def handle_userinput(user_question):
 def main():
     load_dotenv()
     st.set_page_config(page_title="Chat with multiple PDFs",
-                       page_icon=":books:")
+                       page_icon="")
     st.write(css, unsafe_allow_html=True)
 
     if "conversation" not in st.session_state:
@@ -75,7 +77,7 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("BAZ | SmartProject :books:")
+    st.header("BAZ | AI ")
     user_question = st.text_input("Stel een vraag:")
     if user_question:
         handle_userinput(user_question)
@@ -88,7 +90,7 @@ def main():
             with st.spinner("Opslaan..."):
                 # get pdf text
                 raw_text = get_pdf_text(pdf_docs)
-
+                
                 # get the text chunks
                 text_chunks = get_text_chunks(raw_text)
 

@@ -1,0 +1,41 @@
+{
+    "Binnendeuren": [
+        {
+            "Type": "Houten deur",
+            "Brandwerendheid": "30 minuten",
+            "Afmeting": "Conform tekening",
+            "Kantuitvoering": "Enkele aanslag",
+            "Glasuitvoering": "Niet van toepassing",
+            "Hang en sluitwerk": "Bijbehorend hang- en sluitwerk"
+        },
+        {
+            "Type": "Houten deur",
+            "Brandwerendheid": "60 minuten",
+            "Afmeting": "Conform tekening",
+            "Kantuitvoering": "Enkele aanslag",
+            "Glasuitvoering": "Niet van toepassing",
+            "Hang en sluitwerk": "Bijbehorend hang- en sluitwerk"
+        },
+        {
+            "Type": "Metaal gevelelement",
+            "Brandwerendheid": "Niet van toepassing",
+            "Afmeting": "Conform tekening",
+            "Kantuitvoering": "Niet van toepassing",
+            "Glasuitvoering": "Niet van toepassing",
+            "Hang en sluitwerk": "Bijbehorend hang- en sluitwerk"
+        }
+    ],
+    "Binnendeurkozijnen": [
+        {
+            "Type": "Houten kozijn (CLT)",
+            "Brandwerendheid": "30 minuten",
+            "Afmeting": "Conform tekening"
+        },
+        {
+            "Type": "Houten kozijn (CLT)",
+            "Brandwerendheid": "60 minuten",
+            "Afmeting": "Conform tekening"
+        }
+    ],
+    "Hang en sluitwerk": "Bijbehorend hang- en sluitwerk"
+}
